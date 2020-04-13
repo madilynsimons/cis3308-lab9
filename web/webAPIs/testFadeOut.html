@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #fadeThis {
+                opacity: 1;
+                transition: opacity 1.5s; 
+            }
+
+            #fadeThis.fade {
+                opacity: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="fadeOut">Fade Out</button>
+        <button id="fadeIn">Fade In</button>
+        <h2 id="fadeThis">Heading</h2>
+        <script>
+            var fadeThis = document.getElementById('fadeThis');
+
+            document.getElementById('fadeOut').onclick = function () {
+                fadeThis.classList.add('fade');
+            };
+            document.getElementById('fadeIn').onclick = function () {
+                fadeThis.classList.remove('fade');
+            };
+        </script>
+    </body>
+</html>
